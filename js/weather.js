@@ -19,8 +19,8 @@ function onGeoOk(position) {
       //   )}℃ ~ ${Math.round(data.main.temp_max)}℃`;
     });
 }
-function onGeoError() {
-  alert("error");
+function onGeoError(error) {
+  alert("error" + error.code);
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);

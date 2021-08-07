@@ -20,7 +20,7 @@ function onGeoOk(position) {
     });
 }
 function onGeoError(error) {
-  alert("error" + error.code);
+  console.log("error" + error.code);
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError, {

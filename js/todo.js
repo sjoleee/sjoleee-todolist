@@ -34,6 +34,10 @@ function paintToDo(newToDo) {
   checkLabel.htmlFor = checkButton.id;
   checkButton.addEventListener("click", checkToDo);
   span.innerText = newToDo.text;
+  if (newToDo.check == true) {
+    span.classList.add("check");
+    checkButton.checked = true;
+  }
   toDoList.appendChild(li);
   li.appendChild(checkButton);
   li.appendChild(checkLabel);
@@ -45,6 +49,14 @@ function checkToDo(event) {
   const li = event.target.parentNode;
   const span = li.querySelector("span");
   span.classList.toggle("check");
+  for (let x of toDos) {
+    if (x.id == li.id && x.check == true) {
+      x.check = false;
+    } else if (x.id == li.id && x.check == false) {
+      x.check = true;
+    }
+  }
+  saveToDos();
 }
 
 function handleToDoSubmit(event) {
@@ -59,6 +71,7 @@ function handleToDoSubmit(event) {
   const newToDoObj = {
     text: newToDo,
     id: Date.now(),
+    check: false,
   };
   toDos.push(newToDoObj);
   paintToDo(newToDoObj);

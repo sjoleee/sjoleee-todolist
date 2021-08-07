@@ -1,14 +1,32 @@
 const quotes = [
-  { quote: "a", author: "aa" },
-  { quote: "b", author: "bb" },
-  { quote: "c", author: "cc" },
-  { quote: "d", author: "dd" },
-  { quote: "e", author: "ee" },
-  { quote: "f", author: "ff" },
-  { quote: "g", author: "gg" },
-  { quote: "h", author: "hh" },
-  { quote: "i", author: "ii" },
-  { quote: "j", author: "jj" },
+  { quote: "오늘 놀 일을 내일로 미루지 마라", author: "이상조" },
+  { quote: "싫으면 안 하면 된다", author: "이상조" },
+  { quote: "근본이 중요하다", author: "김효진" },
+  { quote: "DONE is better than NOT COMPLETE", author: "김효진" },
+  {
+    quote: "일단 똥을 싸라, 그럼 유명해질 것이다",
+    author: "이상조",
+  },
+  {
+    quote: "Imagination is more important than knowledge.",
+    author: "Albert Einstein",
+  },
+  {
+    quote: "A goal without a plan is just a wish.",
+    author: "Antoine de Saint-Exupery",
+  },
+  {
+    quote: "A wise man will make more opportunities than he finds.",
+    author: "Sir Francis Bacon",
+  },
+  {
+    quote: "Never leave that 'till tomorrow which you can do today.",
+    author: "Benjamin Franklin",
+  },
+  {
+    quote: "Much learning does not teach understanding.",
+    author: "Heraclitus",
+  },
 ];
 
 const quote = document.querySelector("#quote span:first-child");

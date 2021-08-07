@@ -1,8 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.check {
+    color: gray;
+}
+
+.bgImage {
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#blackBoard {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    position: fixed;
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+
+#clock {
+    display: flex;
+    color: white;
+    text-shadow: 0px 0px 13px #000;
+    margin-top: 7vh;
+    margin-bottom: 3vh;
+    height: 15vh;
+    width: 100vw;
+    font-size: 7rem;
+    justify-content: center;
+}
+
+.login-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-form input:first-child:focus {
+    outline: none;
+    text-decoration: underline white;
+}
+
+#login-form input:first-child {
+    height: 5vh;
+    width: minmax(18vw, 50vw);
+    border-radius: 10px;
+    text-align: center;
+    background-color: inherit;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 0px 0px 5px #000;
+}
+
+#login-form input:first-child::placeholder {
+    color: white;
+    font-size: 1.4rem;
+    text-shadow: 0px 0px 5px #000;
+}
+
+#todo-form input:focus {
+    outline: none;
+}
+
 .hidden {
     display: none;
 }
 
-.check {
-    text-decoration: line-through;
-    color: gray;
+#greeting {
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    animation: fadeIn 0.7s linear;
+}
+
+.greeting-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#todo-div {
+    justify-content: center;
+}
+
+#todo-form {
+    display: flex;
+    justify-content: center;
+}
+
+#todo-form input {
+    height: 5vh;
+    width: 90vw;
+    border-radius: 10px;
+    text-align: center;
+    background-color: inherit;
+    color: white;
+    font-size: 1.3rem;
+    text-shadow: 0px 0px 5px #000;
+}
+
+#todo-form input:focus {
+    outline: none;
+    text-decoration: underline white;
+}
+
+#todo-form input::placeholder {
+    color: white;
+    font-size: 1.3rem;
+    text-shadow: 0px 0px 2px #000;
+}
+
+#todo-list li {
+    display: flex;
+    list-style: none;
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: 0px 0px 5px #000;
+    justify-content: center;
+    margin: 5px 0px;
+}
+
+#todo-list input+label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    vertical-align: middle;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#todo-list span {
+    max-width: 60vw;
+    word-break: break-all;
+}
+
+#todo-list input:checked+label {
+    background-color: rgba(70, 182, 6, 0.9);
+}
+
+#todo-list input {
+    display: none;
+}
+
+#todo-list button {
+    margin-left: 3px;
+    font-size: 0.2rem;
+    text-shadow: 0px 0px 2px white;
+    background-color: inherit;
+    border-color: rgba(255, 255, 255, 0);
+}
+
+#todo-list {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    max-width: 80vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: auto;
+    border-radius: 10px;
+}
+
+#todo-list li:first-child {
+    padding-top: 15px;
+}
+
+#todo-list li:last-child {
+    padding-bottom: 15px;
+}
+
+#weather {
+    position: fixed;
+    top: 6.5vh;
+    left: 10vw;
+    right: 10vw;
+    display: block;
+    color: white;
+    font-size: 1rem;
+    text-shadow: 0px 0px 2px #000;
+    text-align: center;
+}
+
+#quote {
+    font-size: 15px;
+    position: fixed;
+    bottom: -15px;
+    left: 1vw;
+    right: 1vw;
+    text-align: center;
+    transition-property: bottom;
+    transition-duration: 1s;
+    color: white;
+}
+
+#quote span {
+    display: block;
+}
+
+#quote span:last-child {
+    font-size: 10px;
+}
+
+#quote:hover {
+    bottom: 5px;
 }

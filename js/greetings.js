@@ -15,10 +15,13 @@ function onLoginSubmit(event) {
 
 function paintGreetings(username) {
   greeting.classList.remove(HIDDEN_CLASSNAME);
-  greeting.innerText = `Hello ${username}`;
+  greeting.innerText = `Hello, ${username}`;
+  document.querySelector("#todo-div").classList.remove("hidden");
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+const greetings = document.querySelector("#greeting");
 
 if (savedUsername == null) {
   loginForm.classList.remove(HIDDEN_CLASSNAME);

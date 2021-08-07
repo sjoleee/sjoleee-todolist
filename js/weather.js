@@ -23,4 +23,8 @@ function onGeoError(error) {
   alert("error" + error.code);
 }
 
-navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError, {
+  enableHighAccuracy: false,
+  timeout: 20000,
+  maximumAge: 1000,
+});

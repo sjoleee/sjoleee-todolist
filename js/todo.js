@@ -15,6 +15,9 @@ function deleteToDo(event) {
   li.remove();
   toDos = toDos.filter((todo) => todo.id != li.id);
   saveToDos();
+  if (toDos.length <= 8 && toDos.length >= 1) {
+    toDoForm.classList.remove("hidden");
+  }
 }
 
 function paintToDo(newToDo) {
@@ -46,7 +49,8 @@ function checkToDo(event) {
 
 function handleToDoSubmit(event) {
   event.preventDefault();
-  if (toDos.length >= 10) {
+  if (toDos.length >= 8) {
+    toDoForm.classList.add("hidden");
     alert("That's enough!");
     return;
   }

@@ -8,8 +8,8 @@ const quotes = [
     author: "이상조",
   },
   {
-    quote: "Imagination is more important than knowledge.",
-    author: "Albert Einstein",
+    quote: "죽지말고 죽여라",
+    author: "한지민",
   },
   {
     quote: "A goal without a plan is just a wish.",

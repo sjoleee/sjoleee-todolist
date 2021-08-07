@@ -58,12 +58,14 @@ body {
     align-items: center;
 }
 
-#login-form input:focus {
+#login-form input:focus,
+#change-form input:focus {
     outline: none;
     text-decoration: underline white;
 }
 
-#login-form input {
+#login-form input,
+#change-form input {
     height: 5vh;
     text-align: center;
     width: 100vw;
@@ -76,7 +78,8 @@ body {
     margin-top: 1vh;
 }
 
-#login-form input:first-child::placeholder {
+#login-form input::placeholder,
+#change-form input::placeholder {
     color: white;
     font-size: 1.2rem;
     text-shadow: 0px 0px 5px #000;
@@ -98,10 +101,18 @@ body {
     margin: 1.5vh 0vw;
 }
 
-.greeting-div {
+#greeting-div {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+#greeting-btn {
+    font-size: 0.5rem;
+    margin-left: 5px;
+    background-color: inherit;
+    border-style: hidden;
 }
 
 #todo-div {

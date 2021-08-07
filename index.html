@@ -16,8 +16,12 @@
         <span></span>
     </div>
     <h2 id="clock">00:00</h2>
-    <div class="greeting-div">
+    <div id="greeting-div">
+        <form id="change-form" class="hidden">
+            <input required maxlength="15" type="text" placeholder="Change your name" style="border: none" />
+        </form>
         <h1 id="greeting" class="hidden"></h1>
+        <button id="greeting-btn" class="hidden">✏️</button>
     </div>
     <div class="login-div">
         <form id="login-form" class="hidden">
